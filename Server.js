@@ -23,7 +23,7 @@ app.use(cors());
 async function ConnectDB() {
     try{
         await mongoose.connect(process.env.MONGODB_URI),{
-            dbName:"quizdb",
+            dbName:'quizDB',
             maxToolSize:80,
             serverSelectionTimeoutMS:5000
         }
@@ -61,3 +61,4 @@ const PORT = 5000;
 app.listen(process.env.PORT || 5000, () => {
     console.log(`Server is running on port ${PORT}`);
 });
+
